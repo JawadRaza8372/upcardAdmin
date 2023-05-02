@@ -1,0 +1,303 @@
+@import "../../Colors.scss";
+.addModel {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 3;
+	.contentCContainer {
+		height: calc(100% - 75px);
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		.formontainerUpdate {
+			max-width: 650px;
+			width: 95%;
+			height: fit-content;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			input[type="file"] {
+				padding-top: 17px;
+			}
+			input[type="color"] {
+				width: 93% !important;
+			}
+			select {
+				width: 93%;
+				height: 50px;
+				background-color: $secondry_color;
+				font-size: 18px;
+				color: white;
+				margin-bottom: 15px;
+				border-radius: 10px;
+				border: 0px !important;
+				outline: none !important;
+				padding: 0px 12px;
+			}
+			input {
+				width: 90%;
+				height: 50px;
+				background-color: $secondry_color;
+				font-size: 18px;
+				color: white;
+				margin-bottom: 15px;
+				border-radius: 10px;
+				border: 0px !important;
+				outline: none !important;
+				padding: 0px 12px;
+				&::placeholder {
+					color: lightgrey;
+				}
+			}
+
+			button {
+				background-color: $secondry_color;
+				color: white;
+				border: 0px solid $primary_color;
+				width: 70px;
+				height: 40px;
+				outline: none !important;
+				border-radius: 5px;
+			}
+		}
+	}
+	.closeContainer {
+		width: 100%;
+		height: 40px;
+		margin-top: 20px;
+		margin-bottom: 15px;
+		button {
+			background-color: $secondry_color;
+			color: white;
+			border: 1px solid $primary_color;
+			width: 70px;
+			height: 100%;
+			outline: none !important;
+			float: right;
+			margin-right: 20px;
+		}
+	}
+}
+.showMainContainer {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	.addModelBtn {
+		width: 100%;
+		height: 60px;
+		margin-top: 20px;
+		margin-bottom: 15px;
+		button {
+			background-color: $secondry_color;
+			color: white;
+			border: 0px solid $primary_color;
+			width: 120px;
+			height: 100%;
+			outline: none !important;
+			float: right;
+			margin-right: 20px;
+			font-size: 35px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.MuiSvgIcon-root {
+				font-size: 40px;
+			}
+		}
+	}
+	h1 {
+		color: $primary_color;
+		margin: 20px auto;
+		text-align: center;
+		@include fontSizeP(4vw);
+	}
+	.cardsContainer {
+		width: 100%;
+		height: fit-content;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		justify-items: center;
+		margin-bottom: 20px;
+		@media screen and (max-width: 768px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		.updateModel {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 3;
+			.closeContainer {
+				width: 100%;
+				height: 40px;
+				margin-top: 20px;
+				margin-bottom: 15px;
+				button {
+					background-color: $secondry_color;
+					color: white;
+					border: 1px solid $primary_color;
+					width: 70px;
+					height: 100%;
+					outline: none !important;
+					float: right;
+					margin-right: 20px;
+				}
+			}
+			.contentbodyCConta {
+				width: 100%;
+				height: calc(100% - 75px);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				.formontainerUpdate {
+					max-width: 650px;
+					width: 95%;
+					height: fit-content;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+
+					img {
+						height: 150px;
+						width: 100%;
+						object-fit: contain;
+						margin-bottom: 15px;
+					}
+					button {
+						background-color: $secondry_color;
+						color: white;
+						border: 0px solid $primary_color;
+						width: 70px;
+						height: 40px;
+						outline: none !important;
+						border-radius: 5px;
+					}
+					input {
+						width: 90%;
+						height: 50px;
+						background-color: $secondry_color;
+						font-size: 18px;
+						color: white;
+						margin-bottom: 15px;
+						border-radius: 10px;
+						border: 0px !important;
+						outline: none !important;
+						padding: 0px 12px;
+						&::placeholder {
+							color: lightgrey;
+						}
+					}
+					input[type="color"] {
+						width: 93% !important;
+					}
+					select {
+						width: 93%;
+						height: 50px;
+						background-color: $secondry_color;
+						font-size: 18px;
+						color: white;
+						margin-bottom: 15px;
+						border-radius: 10px;
+						border: 0px !important;
+						outline: none !important;
+						padding: 0px 12px;
+					}
+					textarea {
+						width: 90%;
+						height: 80px;
+						background-color: $secondry_color;
+						font-size: 18px;
+						color: white;
+						margin-bottom: 15px;
+						border-radius: 10px;
+						border: 0px !important;
+						outline: none !important;
+						padding: 10px 12px;
+					}
+				}
+			}
+		}
+		.card {
+			width: 100%;
+			max-width: 250px;
+			height: auto;
+			background-color: $primary_color;
+			color: $secondry_color;
+			padding: 20px;
+			border-radius: 10px;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			flex-direction: column;
+			.twoBtns {
+				width: 100%;
+				height: 30px;
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				flex-direction: row;
+				button {
+					width: 45%;
+					outline: none !important;
+
+					border-radius: 10px;
+					height: 30px;
+					font-weight: bold;
+					&:first-child {
+						background-color: $secondry_color;
+						color: $primary_color;
+						border: 1px solid $primary_color;
+					}
+					&:last-child {
+						color: $secondry_color;
+						background-color: $primary_color;
+						border: 1px solid $secondry_color;
+					}
+				}
+			}
+
+			h3,
+			h4,
+			p {
+				font-weight: normal;
+				margin-bottom: 10px;
+			}
+			img {
+				width: 100%;
+				object-fit: contain;
+			}
+			.cardimageCont {
+				width: 100%;
+				height: 280px;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+				p {
+					position: absolute;
+					width: fit-content;
+					top: 50px;
+					left: 0px;
+					right: 0px;
+					margin: 0px auto;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+@import "../../Colors.scss";
+
+@keyframes loading {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.cardWrapper {
+	width: 100vw;
+	height: 100vh;
+	z-index: 5000;
+	@include allCenter;
+	background-color: $primary_color;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	.card {
+		width: 95%;
+		max-width: 400px;
+		height: 300px;
+		border: 2px solid $secondry_color;
+		border-radius: 30px;
+		@include allCenter;
+		flex-direction: column;
+		.message {
+			font-weight: bold;
+			@include fontSizeP(0.3vw);
+			color: $secondry_color;
+		}
+		.spinner {
+			margin-bottom: 20px;
+			animation: loading 1s linear infinite;
+		}
+	}
+}

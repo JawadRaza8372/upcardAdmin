@@ -1,0 +1,23 @@
+@import "../../Colors.scss";
+.mainSection {
+	height: 100vh;
+	width: 100vw;
+	background-color: $primary_color;
+	@include justifyEvn;
+	flex-direction: column;
+	.formHeading {
+		color: $disab_color;
+		@include fontSizeP(5vw);
+		text-align: center;
+	}
+	button {
+		width: 90%;
+		max-width: 350px;
+		height: calc(20px + 7vh);
+		background-color: $secondry_color;
+		border-radius: 1vh;
+		font-size: calc(20px + 1vw);
+		color: $primary_color;
+		font-weight: bold;
+	}
+}

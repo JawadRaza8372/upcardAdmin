@@ -1,0 +1,24 @@
+@import "../../Colors.scss";
+.ordrCard {
+	height: 360px;
+	width: 97%;
+	max-width: 300px;
+	background-color: $primary_color;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	border-radius: 20px;
+	align-self: center;
+	margin: 0 auto;
+	p {
+		color: $disab_color;
+		width: 92%;
+		overflow: hidden;
+		span {
+			font-weight: bold;
+			margin-right: 5px;
+			color: $secondry_color;
+		}
+	}
+}

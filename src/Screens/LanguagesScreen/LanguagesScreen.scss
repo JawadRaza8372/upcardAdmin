@@ -1,0 +1,67 @@
+@import "../../Colors.scss";
+.languagesContainer {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	h1 {
+		color: $primary_color;
+		margin: 20px auto;
+		text-align: center;
+		@include fontSizeP(4vw);
+	}
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		td {
+			.btnsDivs {
+				button {
+					width: 100% !important;
+					border: 0px !important;
+					color: white !important;
+				}
+			}
+		}
+		th {
+			background-color: $secondry_color;
+			color: white;
+			font-weight: bold;
+		}
+		td,
+		th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+		td {
+			font-weight: bold;
+		}
+	}
+}
+.languagesEditor {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	@include allCenter();
+	flex-direction: column;
+	textarea {
+		width: 100%;
+		max-width: 650px;
+		margin-bottom: 20px;
+		height: 120px;
+		background-color: $secondry_color;
+		color: white;
+		font-size: 20px;
+		padding: 10px;
+		border-radius: 12px;
+		&::placeholder {
+			color: lightgray;
+		}
+	}
+	button {
+		width: 120px;
+		height: 50px;
+		background-color: $secondry_color;
+		border: 0px !important;
+		color: white;
+		border-radius: 15px;
+	}
+}
