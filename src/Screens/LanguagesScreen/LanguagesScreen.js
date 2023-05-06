@@ -14,6 +14,8 @@ const LanguagesScreen = () => {
 					<th>English</th>
 					<th>French</th>
 					<th>Spain</th>
+					<th>German</th>
+					<th>Italian</th>
 					<th>Action</th>
 				</tr>
 				{languages &&
@@ -23,6 +25,8 @@ const LanguagesScreen = () => {
 							english={dat?.english}
 							french={dat?.french}
 							spain={dat?.spain}
+							german={dat?.german}
+							italian={dat?.italy}
 						/>
 					))}
 			</table>

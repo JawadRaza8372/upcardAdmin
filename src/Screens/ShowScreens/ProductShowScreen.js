@@ -96,17 +96,6 @@ const ProductShowScreen = () => {
 									setformSubmit({ ...formSubmit, price: e.target.value })
 								}
 							/>
-							<input
-								autoCapitalize='off'
-								autoComplete='off'
-								autoCorrect='off'
-								type={"number"}
-								placeholder='Old Price'
-								value={formSubmit.oldprice}
-								onChange={(e) =>
-									setformSubmit({ ...formSubmit, oldprice: e.target.value })
-								}
-							/>
 
 							<input
 								autoCapitalize='off'

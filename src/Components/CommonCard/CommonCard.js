@@ -121,14 +121,6 @@ const CommonCard = ({
 							/>
 							<input
 								type='number'
-								value={formData?.oldprice}
-								onChange={(e) =>
-									setformData({ ...formData, oldprice: e.target.value })
-								}
-								placeholder='old price'
-							/>
-							<input
-								type='number'
 								value={formData?.price}
 								placeholder='price'
 								onChange={(e) =>

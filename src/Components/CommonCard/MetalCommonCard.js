@@ -111,22 +111,7 @@ const MetalCommonCard = ({
 								}
 								placeholder='title'
 							/>
-							<textarea
-								type='text'
-								value={formData?.description}
-								onChange={(e) =>
-									setformData({ ...formData, description: e.target.value })
-								}
-								placeholder='description'
-							/>
-							<input
-								type='number'
-								value={formData?.oldprice}
-								onChange={(e) =>
-									setformData({ ...formData, oldprice: e.target.value })
-								}
-								placeholder='old price'
-							/>
+
 							<input
 								type='number'
 								value={formData?.price}

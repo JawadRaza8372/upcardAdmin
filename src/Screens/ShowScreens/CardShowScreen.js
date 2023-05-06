@@ -80,7 +80,11 @@ const CardShowScreen = () => {
 								value={formSubmit.title}
 								required
 								onChange={(e) =>
-									setformSubmit({ ...formSubmit, title: e.target.value })
+									setformSubmit({
+										...formSubmit,
+										title: e.target.value,
+										description: e.target.value,
+									})
 								}
 							/>
 
@@ -96,29 +100,7 @@ const CardShowScreen = () => {
 									setformSubmit({ ...formSubmit, price: e.target.value })
 								}
 							/>
-							<input
-								autoCapitalize='off'
-								autoComplete='off'
-								autoCorrect='off'
-								type={"number"}
-								placeholder='Old Price'
-								value={formSubmit.oldprice}
-								onChange={(e) =>
-									setformSubmit({ ...formSubmit, oldprice: e.target.value })
-								}
-							/>
 
-							<input
-								autoCapitalize='off'
-								autoComplete='off'
-								autoCorrect='off'
-								type={"text"}
-								placeholder='Description'
-								value={formSubmit.description}
-								onChange={(e) =>
-									setformSubmit({ ...formSubmit, description: e.target.value })
-								}
-							/>
 							<input
 								autoCapitalize='off'
 								autoComplete='off'

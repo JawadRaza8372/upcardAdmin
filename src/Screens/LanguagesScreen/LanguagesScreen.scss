@@ -42,11 +42,17 @@
 	background-color: transparent;
 	@include allCenter();
 	flex-direction: column;
+	span {
+		width: 100%;
+		max-width: 650px;
+		color: white;
+		margin-bottom: 5px;
+	}
 	textarea {
 		width: 100%;
 		max-width: 650px;
-		margin-bottom: 20px;
-		height: 120px;
+		margin-bottom: 10px;
+		height: 105px;
 		background-color: $secondry_color;
 		color: white;
 		font-size: 20px;
