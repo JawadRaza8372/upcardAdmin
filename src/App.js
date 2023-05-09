@@ -8,10 +8,12 @@ import {
 	setMetalCards,
 	setOrders,
 	setLanguages,
+	setBanner,
 } from "./store/projectSlice";
 import { collection, onSnapshot } from "firebase/firestore";
 import { dbs } from "./Database/Database";
 import {
+	fetchBanner,
 	fetchClubs,
 	fetchLanguage,
 	fetchMetalCards,
@@ -39,6 +41,9 @@ function App() {
 				return { id: dat, ...Object.values(otherproducts)[index] };
 			});
 			dispatch(setProducts({ products: resultarry }));
+		});
+		fetchBanner().then((banner) => {
+			dispatch(setBanner({ banner: banner }));
 		});
 		fetchLanguage().then((languages) => {
 			let resultarry = Object.keys(languages).map((dat, index) => {

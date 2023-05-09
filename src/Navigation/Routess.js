@@ -9,6 +9,7 @@ import CardShowScreen from "../Screens/ShowScreens/CardShowScreen";
 import ProductShowScreen from "../Screens/ShowScreens/ProductShowScreen";
 import ClubsShowScreen from "../Screens/ShowScreens/ClubsShowScreen";
 import LanguagesScreen from "../Screens/LanguagesScreen/LanguagesScreen";
+import UploadBanner from "../Screens/UploadBanner/UploadBanner";
 
 function Routess() {
 	return (
@@ -59,6 +60,14 @@ function Routess() {
 				element={
 					<ProtectedRoute>
 						<OrderScreen />
+					</ProtectedRoute>
+				}
+			/>
+			<Route
+				path='/banner'
+				element={
+					<ProtectedRoute>
+						<UploadBanner />
 					</ProtectedRoute>
 				}
 			/>

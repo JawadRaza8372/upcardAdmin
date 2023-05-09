@@ -6,6 +6,7 @@ const initialState = {
 	products: [],
 	clubs: [],
 	languages: [],
+	banner: null,
 };
 
 export const projectSlice = createSlice({
@@ -47,10 +48,23 @@ export const projectSlice = createSlice({
 				state.languages = action.payload.languages;
 			}
 		},
+		setBanner: (state, action) => {
+			if (action.payload.banner === null) {
+				state.banner = null;
+			} else {
+				state.banner = action.payload.banner;
+			}
+		},
 	},
 });
 
-export const { setOrders, setClubs, setMetalCards, setProducts, setLanguages } =
-	projectSlice.actions;
+export const {
+	setOrders,
+	setClubs,
+	setMetalCards,
+	setProducts,
+	setBanner,
+	setLanguages,
+} = projectSlice.actions;
 
 export default projectSlice.reducer;

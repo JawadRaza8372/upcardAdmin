@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import LogoutIcon from "@material-ui/icons/ExitToApp";
 import CloseIcon from "@material-ui/icons/Close";
 import DirectionsCar from "@material-ui/icons/DirectionsCar";
+import Banner from "@material-ui/icons/AddAPhoto";
 import LinkButton from "./LinkButton";
 import logo from "../../ownassets/smalllog.png";
 import { setAuth } from "../../store/authSlice";
@@ -48,6 +49,11 @@ function AnimatedSideBar({ children }) {
 			title: "Languages",
 			icon: <Language id='navIcon' />,
 			link: "/laguages",
+		},
+		{
+			title: "Banner",
+			icon: <Banner id='navIcon' />,
+			link: "/banner",
 		},
 	];
 

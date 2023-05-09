@@ -17,6 +17,11 @@ const fetchLanguage = async () => {
 	let finaldata = result?.val();
 	return finaldata;
 };
+const fetchBanner = async () => {
+	const result = await get(child(ref(getDatabase()), "/bannerimg/banner"));
+	let finaldata = result?.val();
+	return finaldata;
+};
 const fetchMetalCards = async () => {
 	const result = await get(child(ref(getDatabase()), "/metalCards"));
 	let finaldata = result?.val();
@@ -101,6 +106,18 @@ const updateClubs = async (id, data) => {
 		});
 	return result;
 };
+
+const updateBanner = async (data) => {
+	let result = { msg: "", error: "" };
+	await set(ref(getDatabase(), "/bannerimg/banner"), data)
+		.then(() => {
+			result = { msg: "sucess", error: "" };
+		})
+		.catch((e) => {
+			result = { msg: "", error: "internal server Error" };
+		});
+	return result;
+};
 const delClubs = async (id) => {
 	let result = { msg: "", error: "" };
 	await remove(ref(getDatabase(), "/FootballClubs/" + id))
@@ -160,4 +177,6 @@ export {
 	addotherprod,
 	fetchLanguage,
 	updatelanguages,
+	fetchBanner,
+	updateBanner,
 };
