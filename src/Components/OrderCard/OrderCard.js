@@ -17,7 +17,7 @@ function OrderCard({ id, data }) {
 				{data?.products?.length}
 			</p>
 			<p>
-				<span>Total Price:</span>${data?.price}
+				<span>Total Price:</span>€{data?.price}
 			</p>
 			<p>
 				<span>Customer Name:</span>

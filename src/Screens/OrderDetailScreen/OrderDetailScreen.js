@@ -41,15 +41,13 @@ function OrderDetailScreen() {
 					<p>{final?.deliveryInfo?.address?.postal_code}</p>
 					<h1>Customer Name:</h1>
 					<p>{final?.deliveryInfo?.name?.full_name}</p>
+					<h1>Total</h1>
+					<p>€{final?.price}</p>
 				</>
 			)}
-			{final?.products && (
+			{final?.products.length > 0 && (
 				<>
 					<h1>Products</h1>
-				</>
-			)}
-			{final?.products && (
-				<>
 					<div className='ordercontainerscard'>
 						{final?.products.map((dat) => (
 							<>
@@ -58,12 +56,29 @@ function OrderDetailScreen() {
 										<img src={dat?.imgSrc} alt='product' />
 									</div>
 									<div className='extraservies'>
+										<h5>Product Id:</h5>
+										<p>{dat?.pid}</p>
+									</div>
+								</div>
+							</>
+						))}
+					</div>
+				</>
+			)}
+			{final?.extras.length > 0 && (
+				<>
+					<h1>Extras</h1>
+					<div className='ordercontainerscard'>
+						{final?.extras.map((dat) => (
+							<>
+								<div className='ordercard'>
+									<div className='extraservies'>
 										<h5>Title:</h5>
-										<p>{dat?.extra?.title}</p>
+										<p>
+											{dat?.title}+ €{dat?.price}
+										</p>
 										<h5>Description:</h5>
-										<p>{dat?.extra?.subtitle}</p>
-										<h5>Price:</h5>
-										<p>${dat?.extra?.price}</p>
+										<p>{dat?.subtitle}</p>
 									</div>
 								</div>
 							</>

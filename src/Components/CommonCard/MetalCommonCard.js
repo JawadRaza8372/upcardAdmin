@@ -81,11 +81,11 @@ const MetalCommonCard = ({
 						: "---"}
 				</h4>
 				<p>
-					<b>Old Price $:</b>
+					<b>Old Price €:</b>
 					{oldpricce ? `${oldpricce}` : "---"}{" "}
 				</p>
 				<p>
-					<b>Current Price $:</b>
+					<b>Current Price €:</b>
 					{price ? `${price}` : "---"}
 				</p>
 				<NewBtnDivs
